@@ -12,6 +12,8 @@ from telegram.ext import (
 )
 
 TOKEN = os.getenv("BOT_TOKEN")
+print(f"DEBUG: BOT_TOKEN = {TOKEN}")
+
 if not TOKEN:
     print("❌ ERROR: BOT_TOKEN no está configurado en variables de entorno. Por favor, configúralo antes de ejecutar el bot.")
     exit(1)

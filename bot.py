@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import asyncio
+from dotenv import load_dotenv  # <-- Importa python-dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
@@ -11,8 +12,10 @@ from telegram.ext import (
     filters
 )
 
+load_dotenv()  # <-- Carga variables desde el archivo .env
+
 TOKEN = os.getenv("BOT_TOKEN")
-print(f"DEBUG: BOT_TOKEN = {TOKEN}")
+print(f"DEBUG: BOT_TOKEN = {TOKEN}")  # Para debug, muestra si se leyó bien
 
 if not TOKEN:
     print("❌ ERROR: BOT_TOKEN no está configurado en variables de entorno. Por favor, configúralo antes de ejecutar el bot.")

@@ -15,7 +15,6 @@ from telegram.ext import (
 load_dotenv()  # <-- Carga variables desde el archivo .env
 
 TOKEN = os.getenv("BOT_TOKEN")
-print(f"DEBUG: BOT_TOKEN = {TOKEN}")  # Para debug, muestra si se leyó bien
 
 if not TOKEN:
     print("❌ ERROR: BOT_TOKEN no está configurado en variables de entorno. Por favor, configúralo antes de ejecutar el bot.")

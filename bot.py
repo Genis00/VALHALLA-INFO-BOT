@@ -14,6 +14,9 @@ from telegram.ext import (
 
 load_dotenv()  # <-- Carga variables desde el archivo .env
 
+import telegram
+print("python-telegram-bot version:", telegram.__version__)
+
 TOKEN = os.getenv("BOT_TOKEN")
 
 if not TOKEN:
